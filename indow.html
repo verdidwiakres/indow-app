@@ -1,0 +1,340 @@
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   INDOW
+  </title>
+  <script src="https://cdn.tailwindcss.com">
+  </script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&amp;display=swap" rel="stylesheet"/>
+  <style>
+   .hidden {
+      display: none;
+    }
+  </style>
+ </head>
+ <body class="font-roboto bg-gray-100">
+  <header class="bg-blue-600 text-white p-4">
+   <div class="container mx-auto flex justify-between items-center">
+    <div class="flex items-center">
+     <img alt="Gambar indowJPG.jpg" class="mr-2" height="40" src="Gambar indowJPG..jpg" width="60"/>
+     <h1 class="text-2xl font-bold">
+      INDOW
+     </h1>
+    </div>
+    <nav>
+     <ul class="flex space-x-4">
+      <li>
+       <a class="hover:underline" href="#home">
+        Home
+       </a>
+      </li>
+      <li>
+       <a class="hover:underline" href="#features">
+        Features
+       </a>
+      </li>
+      <li>
+       <a class="hover:underline" href="#contact">
+        Contact
+       </a>
+      </li>
+     </ul>
+    </nav>
+   </div>
+  </header>
+  <main class="container mx-auto p-4">
+   <section class="my-8" id="home">
+    <div class="text-center">
+     <h2 class="text-3xl font-bold mb-4">
+      Selamat Datang di INDOW
+     </h2>
+     <p class="text-lg">
+      Aplikasi inovatif untuk membantu orang tua dalam memantau kesehatan bayi mereka.
+     </p>
+     <img alt="Gambar indow.JPG.jpg" class="mx-auto my-4" height="400" src="Gambar indowJPG..jpg" width="600"/>
+    </div>
+   </section>
+   <section class="my-8" id="features">
+    <h2 class="text-2xl font-bold mb-4">
+     Fitur Utama
+    </h2>
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+     <div class="bg-white p-4 rounded shadow feature-item" data-feature="ideal-weight-calculator">
+      <h3 class="text-xl font-bold mb-2">
+       Kalkulator Berat Badan Ideal
+      </h3>
+      <p>
+       Hitung berat badan ideal bayi berdasarkan usia dan jenis kelamin.
+      </p>
+      <img alt="Illustration of a weight scale and a baby" class="my-2" height="200" src="https://storage.googleapis.com/a1aa/image/qmMeSeMu2igg50Fkk9kt7CuLruBpgFp25CX6cMiNXkJXSL5TA.jpg" width="300"/>
+     </div>
+     <div class="bg-white p-4 rounded shadow feature-item" data-feature="nutrition-guide">
+      <h3 class="text-xl font-bold mb-2">
+       Panduan Nutrisi dan ASI
+      </h3>
+      <p>
+       Informasi tentang kebutuhan nutrisi bayi usia 0-6 bulan.
+      </p>
+      <img alt="Illustration of a mother breastfeeding her baby" class="my-2" height="200" src="https://storage.googleapis.com/a1aa/image/jTjwL6JwuwZAL9H9kIZTXfWPn5ma38m1O5leoFwkumDaSL5TA.jpg" width="300"/>
+     </div>
+     <div class="bg-white p-4 rounded shadow feature-item" data-feature="growth-chart">
+      <h3 class="text-xl font-bold mb-2">
+       Grafik Pertumbuhan
+      </h3>
+      <p>
+       Grafik pertumbuhan berat badan untuk memantau perkembangan bayi.
+      </p>
+      <img alt="Illustration of a growth chart with a baby" class="my-2" height="200" src="https://storage.googleapis.com/a1aa/image/xk62vO0ZqyaHFx7EcUSnva1omMb4zUGoRdpY1XZ5CdSm0SeJA.jpg" width="300"/>
+     </div>
+     <div class="bg-white p-4 rounded shadow feature-item" data-feature="additional-health-info">
+      <h3 class="text-xl font-bold mb-2">
+       Informasi Kesehatan Tambahan
+      </h3>
+      <p>
+       Tips dan informasi tentang kesehatan bayi.
+      </p>
+      <img alt="Illustration of a doctor giving advice to parents" class="my-2" height="200" src="https://storage.googleapis.com/a1aa/image/veozOdu2pG2LUCt7kmwVxIzfSf4Gy5hxlKKstmpSfrXYJtkPB.jpg" width="300"/>
+     </div>
+    </div>
+   </section>
+   <section class="my-8 hidden" id="feature-detail">
+    <div class="bg-white p-4 rounded shadow">
+     <h2 class="text-2xl font-bold mb-4" id="feature-title">
+     </h2>
+     <p id="feature-description">
+     </p>
+     <ul class="list-disc pl-5 mt-4" id="feature-tips">
+     </ul>
+     <button class="bg-blue-600 text-white p-2 rounded mt-4" id="back-button">
+      Kembali
+     </button>
+    </div>
+   </section>
+   <section class="my-8 hidden" id="ideal-weight-calculator">
+    <div class="bg-white p-4 rounded shadow">
+     <h2 class="text-2xl font-bold mb-4">
+      Kalkulator Berat Badan Ideal
+     </h2>
+     <form class="space-y-4" id="weightForm">
+      <div>
+       <label class="block text-sm font-medium text-gray-700" for="age">
+        Usia (bulan)
+       </label>
+       <input class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm" id="age" name="age" required="" type="number"/>
+      </div>
+      <div>
+       <label class="block text-sm font-medium text-gray-700" for="gender">
+        Jenis Kelamin
+       </label>
+       <select class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm" id="gender" name="gender" required="">
+        <option value="male">
+         Laki-laki
+        </option>
+        <option value="female">
+         Perempuan
+        </option>
+       </select>
+      </div>
+      <div class="flex justify-between">
+       <button class="w-full bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-700" onclick="calculateWeight()" type="button">
+        Hitung
+       </button>
+      </div>
+     </form>
+     <div class="hidden mt-4" id="result">
+      <h2 class="text-xl font-bold text-center mb-4">
+       Berat Badan Ideal
+      </h2>
+      <p class="text-center text-lg" id="weightResult">
+      </p>
+      <div class="flex justify-between mt-4">
+       <button class="w-full bg-gray-500 text-white px-4 py-2 rounded-md hover:bg-gray-700" onclick="resetForm()" type="button">
+        Kembali
+       </button>
+      </div>
+     </div>
+    </div>
+   </section>
+   <section class="my-8 hidden" id="growth-chart">
+    <div class="bg-white p-4 rounded shadow">
+     <h2 class="text-2xl font-bold mb-4">
+      Grafik Pertumbuhan
+     </h2>
+     <img alt="Gambar beratbadanjpg.jpg" class="my-4 mx-auto" height="400" src="Gambar beratbadanjpg.jpg" width="600"/>
+     <p>
+      Grafik pertumbuhan ini membantu Anda memantau perkembangan berat badan bayi dari waktu ke waktu. Dengan mencatat berat badan bayi setiap bulan, Anda dapat membandingkannya dengan grafik pertumbuhan standar dan memastikan bayi Anda tumbuh dengan sehat.
+     </p>
+     <h3 class="text-xl font-bold mt-4">
+      Tips Memantau Pertumbuhan Bayi:
+     </h3>
+     <ul class="list-disc pl-5 mt-2">
+      <li>
+       Catat berat badan bayi setiap bulan.
+      </li>
+      <li>
+       Bandingkan dengan grafik pertumbuhan standar.
+      </li>
+      <li>
+       Konsultasikan dengan dokter jika ada penyimpangan.
+      </li>
+     </ul>
+     <h3 class="text-xl font-bold mt-4">
+      Tips Tambahan:
+     </h3>
+     <ul class="list-disc pl-5 mt-2">
+      <li>
+       Pastikan bayi mendapatkan nutrisi yang cukup.
+      </li>
+      <li>
+       Perhatikan tanda-tanda bayi sehat seperti aktivitas dan pola tidur.
+      </li>
+      <li>
+       Jangan ragu untuk berkonsultasi dengan dokter jika ada kekhawatiran.
+      </li>
+     </ul>
+     <button class="bg-blue-600 text-white p-2 rounded mt-4" id="back-button-growth">
+      Kembali
+     </button>
+    </div>
+   </section>
+   <section class="my-8" id="contact">
+    <h2 class="text-2xl font-bold mb-4">
+     Kontak Kami
+    </h2>
+    <form class="bg-white p-4 rounded shadow">
+     <div class="mb-4">
+      <label class="block text-sm font-bold mb-2" for="name">
+       Nama
+      </label>
+      <input class="w-full p-2 border rounded" id="name" placeholder="Nama Anda" type="text"/>
+     </div>
+     <div class="mb-4">
+      <label class="block text-sm font-bold mb-2" for="email">
+       Email
+      </label>
+      <input class="w-full p-2 border rounded" id="email" placeholder="Email Anda" type="email"/>
+     </div>
+     <div class="mb-4">
+      <label class="block text-sm font-bold mb-2" for="message">
+       Pesan
+      </label>
+      <textarea class="w-full p-2 border rounded" id="message" placeholder="Pesan Anda" rows="4"></textarea>
+     </div>
+     <button class="bg-blue-600 text-white p-2 rounded" type="submit">
+      Kirim
+     </button>
+    </form>
+   </section>
+  </main>
+  <footer class="bg-blue-600 text-white p-4 text-center">
+   <p>
+    © 2024 INDOW. All rights reserved.
+   </p>
+  </footer>
+  <script>
+   const features = {
+      "ideal-weight-calculator": {
+        title: "Kalkulator Berat Badan Ideal",
+        description: "Kalkulator ini membantu Anda menghitung berat badan ideal bayi berdasarkan usia dan jenis kelamin, menggunakan standar kesehatan dari WHO.",
+        tips: [
+          "Masukkan usia bayi dalam bulan.",
+          "Pilih jenis kelamin bayi.",
+          "Klik tombol hitung untuk mendapatkan hasil."
+        ]
+      },
+      "nutrition-guide": {
+        title: "Panduan Nutrisi dan ASI",
+        description: "Panduan ini memberikan informasi tentang kebutuhan nutrisi bayi usia 0-6 bulan, termasuk pentingnya ASI eksklusif.",
+        tips: [
+          "Berikan ASI eksklusif selama 6 bulan pertama.",
+          "Pastikan bayi mendapatkan cukup ASI setiap hari.",
+          "Konsultasikan dengan dokter jika ada masalah menyusui."
+        ]
+      },
+      "growth-chart": {
+        title: "Grafik Pertumbuhan",
+        description: "Grafik ini membantu Anda memantau perkembangan berat badan bayi dari waktu ke waktu.",
+        tips: [
+          "Catat berat badan bayi setiap bulan.",
+          "Bandingkan dengan grafik pertumbuhan standar.",
+          "Konsultasikan dengan dokter jika ada penyimpangan."
+        ]
+      },
+      "additional-health-info": {
+        title: "Informasi Kesehatan Tambahan",
+        description: "Informasi ini mencakup tips dan saran tentang kesehatan bayi, seperti imunisasi dan cara menangani bayi yang rewel.",
+        tips: [
+          "Ikuti jadwal imunisasi yang dianjurkan.",
+          "Pelajari tanda-tanda bayi sehat.",
+          "Konsultasikan dengan dokter jika bayi sering rewel."
+        ]
+      }
+    };
+
+    document.querySelectorAll('.feature-item').forEach(item => {
+      item.addEventListener('click', () => {
+        const featureKey = item.getAttribute('data-feature');
+        const feature = features[featureKey];
+
+        if (featureKey === 'ideal-weight-calculator') {
+          document.getElementById('features').classList.add('hidden');
+          document.getElementById('ideal-weight-calculator').classList.remove('hidden');
+        } else if (featureKey === 'growth-chart') {
+          document.getElementById('features').classList.add('hidden');
+          document.getElementById('growth-chart').classList.remove('hidden');
+        } else {
+          document.getElementById('feature-title').innerText = feature.title;
+          document.getElementById('feature-description').innerText = feature.description;
+          const tipsList = document.getElementById('feature-tips');
+          tipsList.innerHTML = '';
+          feature.tips.forEach(tip => {
+            const li = document.createElement('li');
+            li.innerText = tip;
+            tipsList.appendChild(li);
+          });
+
+          document.getElementById('features').classList.add('hidden');
+          document.getElementById('feature-detail').classList.remove('hidden');
+        }
+      });
+    });
+
+    document.getElementById('back-button').addEventListener('click', () => {
+      document.getElementById('features').classList.remove('hidden');
+      document.getElementById('feature-detail').classList.add('hidden');
+      document.getElementById('ideal-weight-calculator').classList.add('hidden');
+      document.getElementById('growth-chart').classList.add('hidden');
+    });
+
+    document.getElementById('back-button-growth').addEventListener('click', () => {
+      document.getElementById('features').classList.remove('hidden');
+      document.getElementById('growth-chart').classList.add('hidden');
+    });
+
+    function calculateWeight() {
+      const age = document.getElementById('age').value;
+      const gender = document.getElementById('gender').value;
+      let idealWeight;
+
+      if (gender === 'male') {
+        idealWeight = (age * 0.5) + 3;
+      } else {
+        idealWeight = (age * 0.5) + 2.5;
+      }
+
+      document.getElementById('weightResult').innerText = `Berat badan ideal untuk bayi ${age} bulan dengan jenis kelamin ${gender === 'male' ? 'laki-laki' : 'perempuan'} adalah ${idealWeight.toFixed(2)} kg.`;
+      document.getElementById('weightForm').classList.add('hidden');
+      document.getElementById('result').classList.remove('hidden');
+    }
+
+    function resetForm() {
+      document.getElementById('weightForm').reset();
+      document.getElementById('weightForm').classList.remove('hidden');
+      document.getElementById('result').classList.add('hidden');
+    }
+  </script>
+ </body>
+</html>
